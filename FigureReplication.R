@@ -351,7 +351,7 @@ ggplot(metgenes_scale_disease_pcaplot, aes(x = PC1, y = PC2)) +
                                                  size = 2))
 
 
-## Figure 5D ##
+## Figure 4D ##
 
 FBA_mat_norm <- (FBA_mat - rowSums(FBA_mat)) / rowSds(FBA_mat)
 FBA_mat_norm_pca <- pcaMethods::pca(t(FBA_mat_norm))
@@ -387,7 +387,7 @@ ggplot(FBA_mat_norm_pcaplot, aes(x = PC1, y = PC2)) +
                                                  fill = NA,
                                                  size = 2))
 
-## Figure 5E ##
+## Figure 4E ##
 nsca <- function(A)
 {
   Dr <- apply(A, 1, sum)
@@ -433,7 +433,7 @@ ggplot(as.data.frame(pdata), aes(V2, V3))+
         panel.grid.minor = element_blank(),panel.background = element_blank())
 
 
-## Figure 5F ##
+## Figure 4F ##
 
 nometgenes_disease <- geneExp_disease[-c(match(rownames(metgenes_disease),rownames(geneExp_disease))),]
 ica.dat <- icafast(nometgenes_disease,5)
@@ -469,7 +469,7 @@ ggplot(as.data.frame(pdata), aes(V2, V3))+
         panel.grid.minor = element_blank(),panel.background = element_blank())
 
 
-## Figure 5G ##
+## Figure 4G ##
 
 ica.dat <- icafast(metgenes_disease,5)
 ica.matrix <- ica.dat$M
@@ -504,7 +504,7 @@ ggplot(as.data.frame(pdata), aes(V2, V3))+
         panel.grid.minor = element_blank(),panel.background = element_blank())
 
 
-## Figure 5H ##
+## Figure 4H ##
 
 flux <- FBA_mat
 ica.dat <- icafast(flux,8)
@@ -616,7 +616,7 @@ ggplot(as.data.frame(pdata), aes(V2, V3))+
 
 ## Figure 5C ##
 transport <- read.table('transportfluxes.txt', sep = '\t')
-rownames(transportfluxes) <- transportfluxes[,3]
+rownames(transport) <- transport[,3]
 transportfluxes <- transport[,4:11]
 colnames(transportfluxes) <- colnames(FBA_mat)
 
