@@ -17,8 +17,8 @@ This repository contains 9 files.
 - [Gurobi Optimizer](https://www.gurobi.com/downloads/gurobi-optimizer-eula/) for MATLAB (ver. 8.1.1)
 
 # MATLAB Toolboxes
-- Download [Human-GEM model](https://github.com/SysBioChalmers/Human-GEM) (ver. 1.6.0)
-- Download [RAVEN toolbox](https://github.com/SysBioChalmers/RAVEN) (ver. 2.4.1)
+- Download [Human-GEM](https://github.com/SysBioChalmers/Human-GEM) model (ver. 1.6.0)
+- Download [RAVEN](https://github.com/SysBioChalmers/RAVEN) toolbox (ver. 2.4.1)
 
 # Rtudio packages
 - dataVisEasy – 0.3.2
