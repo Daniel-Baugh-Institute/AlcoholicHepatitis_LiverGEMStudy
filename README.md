@@ -39,25 +39,26 @@ This repository contains 9 files.
 3. Structural Analysis of GEMs
 4. Calculating objective functions using SPOT and flux balance analysis using E-Flux2\
 \
-Because of the intense computational power necessary for generating the genome scale metabolic models, we suggest running, at minimum, Part 2 - Generating genome scale metabolic models (below) on a server. We utilized a 56-core server with Intel Xeon CPU E5-2697.\ 
+Because of the intense computational power necessary for generating the genome scale metabolic models, we suggest running, at minimum, Part 2 - Generating genome scale metabolic models (below) on a server. We utilized a 56-core server with Intel Xeon CPU E5-2697.
 \
-Whether you choose to run this code on a computational server or locally, you must have a working version of MATLAB available. The instructions and example code provided herein are specified for individuals choosing to run the code on a computational server. However, the same principles can be applied for individuals choosing to run the code locally.\
+\
+Whether you choose to run this code on a computational server or locally, you must have a working version of MATLAB available. The instructions and example code provided herein are specified for individuals choosing to run the code on a computational server. However, the same principles can be applied for individuals choosing to run the code locally.
 
 **Part 1 - Downloading/Installing toolboxes and organizing workspace**
-1.	Create a directory named “GEMGeneration”.
-    Example code: mkdir ‘GEMGeneration’
-2.	Download [Human-GEM](https://github.com/SysBioChalmers/Human-GEM) model (ver. 1.6.0). Place this folder in the “GEMGeneration” directory.
-3.	Download [RAVEN](https://github.com/SysBioChalmers/RAVEN) toolbox (ver. 2.4.1). Place this toolbox in the “GEMGeneration” directory.
-4.	Download and install [Gurobi Optimizer](https://www.gurobi.com/downloads/gurobi-optimizer-eula/) (ver. 8.1.1). Link the optimizer to your working version of Matlab using the provided instructions from Gurobi.
-5.	Place the following file from FigureReplicationFiles.zip in the “GEMGeneration” directory on the server using a file transfer protocol: “DiseaseData_TPMnorm.txt”.
-    Example code: sftp ‘name of server’
-		 put ‘DiseaseData_TPMnorm.txt’ ‘GEMGeneration’
-6.	Place the following file in the “GEMGeneration” directory on the server using a file transfer protocol: “GenerateDiseaseGEM.m” and “StructuralComparisons.m”.
-    Example code: sftp ‘name of server’
-		 put ‘GenerateDiseaseGEM.m’ ‘GEMGeneration’
-		 put ‘StructuralComparisons.m’ ‘GEMGeneration’
-7.	Create a directory within the “GEMGeneration” folder named “DiseaseGEM”.
-    Example code: mkdir ‘GEMGeneration/DiseaseGEM’
+1. Create a directory named “GEMGeneration”.
+	Example code: mkdir ‘GEMGeneration’
+3. Download [Human-GEM](https://github.com/SysBioChalmers/Human-GEM) model (ver. 1.6.0). Place this folder in the “GEMGeneration” directory.
+4. Download [RAVEN](https://github.com/SysBioChalmers/RAVEN) toolbox (ver. 2.4.1). Place this toolbox in the “GEMGeneration” directory.
+5. Download and install [Gurobi Optimizer](https://www.gurobi.com/downloads/gurobi-optimizer-eula/) (ver. 8.1.1). Link the optimizer to your working version of Matlab using the provided instructions from Gurobi.
+6. Place the following file from FigureReplicationFiles.zip in the “GEMGeneration” directory on the server using a file transfer protocol: “DiseaseData_TPMnorm.txt”.
+	Example code: sftp ‘name of server’
+	put ‘DiseaseData_TPMnorm.txt’ ‘GEMGeneration’
+7. Place the following file in the “GEMGeneration” directory on the server using a file transfer protocol: “GenerateDiseaseGEM.m” and “StructuralComparisons.m”.
+	Example code: sftp ‘name of server’
+	put ‘GenerateDiseaseGEM.m’ ‘GEMGeneration’
+	put ‘StructuralComparisons.m’ ‘GEMGeneration’
+8. Create a directory within the “GEMGeneration” folder named “DiseaseGEM”.
+	Example code: mkdir ‘GEMGeneration/DiseaseGEM’
 
 **Part 2 - Generating genome scale metabolic models**
 1.	Since the generation of GEM’s may take a long time, you may want to start a new screen in the server so that the code continues to run even if you disconnect from the server. Learn more about the screen command here: https://linuxize.com/post/how-to-use-linux-screen/ 
