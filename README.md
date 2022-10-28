@@ -1,4 +1,4 @@
-# Alcoholic Hepatitis Liver Genome-Scale Metabolic Model Study
+# Alcoholic Hepatitis Genome-Scale Metabolic Modeling Study
 
 This repository contains 9 files.
 - **metabolic-Tasks_Essential.xlsx**: Excel file containing the metabolic task list needed for generating the GEMs
@@ -21,17 +21,17 @@ This repository contains 9 files.
 - [RAVEN](https://github.com/SysBioChalmers/RAVEN) toolbox (ver. 2.4.1)
 
 # Rtudio Packages
-- dataVisEasy – 0.3.2
-- limma – 3.52.4
-- ica - 1.0-3
-- matrixStats - 0.62.0
-- pheatmap - 1.0.12
-- pcaMethods - 1.88.0
-- tidyverse - 1.3.2
-- dplyr - 1.0.10
-- reshape2 - 1.4.4
-- stats - 4.1.1
-- ape – 5.6-2
+- dataVisEasy (ver. 0.3.2)
+- limma (ver. 3.52.4)
+- ica (ver. 1.0-3)
+- matrixStats (ver. 0.62.0)
+- pheatmap (ver. 1.0.12)
+- pcaMethods (ver. 1.88.0)
+- tidyverse (ver. 1.3.2)
+- dplyr (ver. 1.0.10)
+- reshape2 (ver. 1.4.4)
+- stats (ver. 4.1.1)
+- ape (ver. 5.6-2)
 
 # Usage - Generating GEMS and Performing Flux Balance Analysis
 **1. Downloading/Installing toolboxes and organizing workspace**  
