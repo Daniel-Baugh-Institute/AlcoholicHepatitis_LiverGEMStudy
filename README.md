@@ -1,4 +1,4 @@
-# Alcoholic Hepatatits Liver Genome-Scale Metabolic Model Study
+# Alcoholic Hepatitis Liver Genome-Scale Metabolic Model Study
 
 This repository contains 9 files.
 - **metabolic-Tasks_Essential.xlsx**: Excel file containing the metabolic task list needed for generating the GEMs
@@ -17,6 +17,8 @@ This repository contains 9 files.
 - [Gurobi Optimizer](https://www.gurobi.com/downloads/gurobi-optimizer-eula/) for MATLAB (ver. 8.1.1)
 
 # MATLAB Toolboxes
+- Download [Human-GEM model](https://github.com/SysBioChalmers/Human-GEM) (ver. 1.6.0)
+- Download [RAVEN toolbox](https://github.com/SysBioChalmers/RAVEN) (ver. 2.4.1)
 
 # Rtudio packages
 - dataVisEasy – 0.3.2
