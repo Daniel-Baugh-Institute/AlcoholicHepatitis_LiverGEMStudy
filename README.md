@@ -1,4 +1,4 @@
-# Alcoholic Hepatitis Liver Genome-Scale Metabolic Model Study
+# Alcoholic Hepatitis Genome-Scale Metabolic Modeling Study
 
 This repository contains 9 files.
 - **metabolic-Tasks_Essential.xlsx**: Excel file containing the metabolic task list needed for generating the GEMs
