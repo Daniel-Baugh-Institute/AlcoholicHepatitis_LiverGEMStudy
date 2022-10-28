@@ -12,7 +12,21 @@ library(reshape2)
 library(stats)
 library(ape)
 
-setwd('Set working directory to location of supplemental files')
+## versions used ##
+# dataVisEasy - 0.3.2
+# limma - 3.52.4
+# ica - 1.0-3
+# matrixStats - 0.62.0
+# pheatmap - 1.0.12
+# pcaMethods - 1.88.0
+# tidyverse - 1.3.2
+# dplyr - 1.0.10
+# reshape2 - 1.4.4
+# stats - 4.1.1
+# ape - 5.6-2
+
+
+setwd('Set working directory to FigureReplicationFiles')
 
 ## Figure 1B ##
 
@@ -49,7 +63,7 @@ metgenes_disease <- geneExp_disease[na.omit(match(metgenes$V1,rownames(geneExp_d
 metgenes_scale_disease <- geneExp_scale_disease[na.omit(match(metgenes$V1,rownames(geneExp_scale_disease))),]
 
 
-# show.rownames and show.colnames must be set to T if running ExtractMatrix function in line 54
+# show.rownames and show.colnames must be set to T if running ExtractMatrix function below
 p <- myHeatmapByAnnotation(metgenes_scale_disease, main = "Metabolic Gene Expression - Disease", groupings = "disease_state",
                            show.rownames = T, gaps.row = FALSE, gaps.col = TRUE, clust.rows = TRUE,
                            show.colnames = T, row.groups = 2)
@@ -120,7 +134,7 @@ plotcov_order <- plotcov_order[order(plotcov_order$sum, decreasing =TRUE),-9]
 # remove "Miscellaneous","Isolated","Pool reactions" subsystems
 plotcov_order <- plotcov_order[-c(match(c("Miscellaneous","Isolated","Pool reactions"),rownames(plotcov_order))),]
 
-# show.rownames and show.colnames must be set to T if running ExtractMatrix function in line 126
+# show.rownames and show.colnames must be set to T if running ExtractMatrix function below
 p <- myHeatmapByAnnotation(plotcov_order[1:10,], clust.rows = FALSE, clust.cols = FALSE, 
                            main = 'Subsystem Tissue Coverage with >10% Difference', groupings = "disease_state",
                            scale.rows = 'zscore', show.colnames = TRUE)
@@ -164,7 +178,7 @@ set_annot_cols(ann_colors)
 set_annot_samps(c("disease_state"))
 set_scale.range(c(-1,1))
 
-# show.rownames and show.colnames must be set to T if running ExtractMatrix function in line 170
+# show.rownames and show.colnames must be set to T if running ExtractMatrix function below
 p <- myHeatmapByAnnotation(FBA_mat, main = "All Fluxes", groupings = "disease_state", scale.rows = "zscore", 
                            row.groups = 2, show.rownames = T,show.colnames = T)
 
@@ -266,7 +280,7 @@ ggplot(geneExp_scale_disease_pcaplot, aes(x = PC1, y = PC2)) +
   scale_color_manual(values = pcolor(8)) +
   xlab(paste0("PC1 (",geneExp_scale_disease_pcavars[1],"%)")) +
   ylab(paste0("PC2 (",geneExp_scale_disease_pcavars[2],"%)")) +
-  ggtitle("PCA – All Genes (23873 Genes)") +
+  ggtitle("PCA All Genes (23873 Genes)") +
   theme_bw() + theme(panel.grid = element_blank(), 
                      plot.title = element_text(hjust = 0.5, size = 35), 
                      axis.text = element_text(size = 20), axis.title = element_text(size = 25), 
@@ -303,7 +317,7 @@ ggplot(nometgenes_scale_disease_pcaplot, aes(x = PC1, y = PC2)) +
   scale_color_manual(values = pcolor(8)) +
   xlab(paste0("PC1 (",nometgenes_scale_disease_pcavars[1],"%)")) +
   ylab(paste0("PC2 (",nometgenes_scale_disease_pcavars[2],"%)")) +
-  ggtitle("PCA – No Metabolic Genes (20315 Genes)") +
+  ggtitle("PCA No Metabolic Genes (20315 Genes)") +
   theme_bw() + theme(panel.grid = element_blank(), 
                      plot.title = element_text(hjust = 0.5, size = 35), 
                      axis.text = element_text(size = 20), axis.title = element_text(size = 25), 
@@ -340,7 +354,7 @@ ggplot(metgenes_scale_disease_pcaplot, aes(x = PC1, y = PC2)) +
   scale_color_manual(values = pcolor(8)) +
   xlab(paste0("PC1 (",metgenes_scale_disease_pcavars[1],"%)")) +
   ylab(paste0("PC2 (",metgenes_scale_disease_pcavars[2],"%)")) +
-  ggtitle("PCA – Metabolic Genes Only (3558 Genes)") +
+  ggtitle("PCA Metabolic Genes Only (3558 Genes)") +
   theme_bw() + theme(panel.grid = element_blank(), 
                      plot.title = element_text(hjust = 0.5, size = 35), 
                      axis.text = element_text(size = 20), axis.title = element_text(size = 25), 
@@ -377,7 +391,7 @@ ggplot(FBA_mat_norm_pcaplot, aes(x = PC1, y = PC2)) +
   scale_color_manual(values = pcolor(8)) +
   xlab(paste0("PC1 (",FBA_mat_norm_pcavars[1],"%)")) +
   ylab(paste0("PC2 (",FBA_mat_norm_pcavars[2],"%)")) +
-  ggtitle("PCA – Metabolic Fluxes (886)") +
+  ggtitle("PCA Metabolic Fluxes (886)") +
   theme_bw() + theme(panel.grid = element_blank(), 
                      plot.title = element_text(hjust = 0.5, size = 35), 
                      axis.text = element_text(size = 20), axis.title = element_text(size = 25), 
@@ -569,7 +583,7 @@ ggplot(SLC_scale_disease_pcaplot, aes(x = PC1, y = PC2)) +
   scale_color_manual(values = pcolor(8)) +
   xlab(paste0("PC1 (",geneExp_scale_disease_pcavars[1],"%)")) +
   ylab(paste0("PC2 (",geneExp_scale_disease_pcavars[2],"%)")) +
-  ggtitle("PCA – (SLC genes)") +
+  ggtitle("PCA (SLC genes)") +
   theme_bw() + theme(panel.grid = element_blank(), 
                      plot.title = element_text(hjust = 0.5, size = 35), 
                      axis.text = element_text(size = 20), axis.title = element_text(size = 25), 
@@ -620,7 +634,7 @@ rownames(transport) <- transport[,3]
 transportfluxes <- transport[,4:11]
 colnames(transportfluxes) <- colnames(FBA_mat)
 
-# show.rownames and show.colnames must be set to T if running ExtractMatrix function in line 257
+# show.rownames and show.colnames must be set to T if running ExtractMatrix function below
 p <- myHeatmapByAnnotation(abs(transportfluxes), main = "Transport Reaction Fluxes", groupings = "disease_state", scale.rows = "zscore", 
                            show.rownames = T,show.colnames = T, gaps.col = T, row.groups = 4)
 
@@ -679,4 +693,19 @@ p <- myHeatmapByAnnotation(abs(res), main = "Transport Reaction Fluxes", groupin
                            show.rownames = T,show.colnames = T, gaps.col = T, row.groups = 4,
                            groupings.genes = c("group1","group2") , groupings.genes.gaps = c(1,2))
 
+
+
+## Figure 5D ##
+
+gr_SLC_scale_disease <- SLC_scale_disease[match(c('ENSG00000103257','ENSG00000021488','ENSG00000103064','ENSG00000138079',
+                                                  'ENSG00000134538','ENSG00000084453','ENSG00000111700'), rownames(SLC_scale_disease)),]
+
+initiate_params()
+set_annotations(annots)
+set_annot_cols(ann_colors)
+set_annot_samps(c("disease_state"))
+set_scale.range(c(-1,1))
+
+p <- myHeatmapByAnnotation(abs(gr_SLC_scale_disease), main = "Transport Reaction Gene Rules", groupings = "disease_state", scale.rows = "zscore", 
+                           show.rownames = T,show.colnames = T, gaps.col = T, clust.rows = F)
 
