@@ -37,11 +37,11 @@ This repository contains 9 files.
 1. Downloading/Installing toolboxes and organizing workspace
 2. Generating genome scale metabolic models (GEMs)
 3. Structural Analysis of GEMs
-4. Calculating objective functions using SPOT and flux balance analysis using E-Flux2
-\n
-Because of the intense computational power necessary for generating the genome scale metabolic models, we suggest running, at minimum, Part 2 - Generating genome scale metabolic models (below) on a server. We utilized a 56-core server with Intel Xeon CPU E5-2697. 
-\n
-Whether you choose to run this code on a computational server or locally, you must have a working version of MATLAB available. The instructions and example code provided herein are specified for individuals choosing to run the code on a computational server. However, the same principles can be applied for individuals choosing to run the code locally.
+4. Calculating objective functions using SPOT and flux balance analysis using E-Flux2\
+\
+Because of the intense computational power necessary for generating the genome scale metabolic models, we suggest running, at minimum, Part 2 - Generating genome scale metabolic models (below) on a server. We utilized a 56-core server with Intel Xeon CPU E5-2697.\ 
+\
+Whether you choose to run this code on a computational server or locally, you must have a working version of MATLAB available. The instructions and example code provided herein are specified for individuals choosing to run the code on a computational server. However, the same principles can be applied for individuals choosing to run the code locally.\
 
 **Part 1 - Downloading/Installing toolboxes and organizing workspace**
 1.	Create a directory named “GEMGeneration”.
