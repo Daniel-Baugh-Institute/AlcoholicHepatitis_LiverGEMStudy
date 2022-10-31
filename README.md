@@ -112,3 +112,6 @@ Note: The “DiseaseStateGEM_allfluxes.txt” file downloaded from the server is
 2. Install all necessary packages (make sure the package versions match those from "RStudio Packages")
 3. Open FigureReplication.R script and change the working directory to the extracted 'FigureReplicationFiles.zip' folder
 4. Run the 'FigureReplication.R' script
+
+**ref:** Manchel et al., (2022). Genome scale metabolic modeling reveals sequential dysregulation of glutathione metabolism in livers from patients with alcoholic hepatitis. *Metabolites. In Review.*
+
